@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import Tratamientos from "./pages/Tratamientos";
 import Productos from "./pages/Productos";
 import SobreMi from "./pages/SobreMi";
-import Contacto from "./pages/Contacto";
 import AgendarTurno from "./pages/AgendarTurno";
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
         <Route path="/tratamientos" element={<Tratamientos />} />
         <Route path="/productos" element={<Productos />} />
         <Route path="/sobre-mi" element={<SobreMi />} />
-        <Route path="/contacto" element={<Contacto />} />
         <Route path="/agendar-turno" element={<AgendarTurno />} />
       </Routes>
     </Router>

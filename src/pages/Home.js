@@ -1,9 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const HomeContainer = styled.div`
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -14,7 +12,6 @@ const HomeContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  margin-top: 6rem;
   font-size: 2.5rem;
   color: #333;
   margin-bottom: 1rem;
@@ -43,31 +40,6 @@ const Description = styled.p`
   @media (max-width: 480px) {
     font-size: 1rem;
     margin-bottom: 1rem;
-  }
-`;
-
-const Button = styled(Link)`
-  padding: 0.8rem 1.5rem;
-  background-color: #ff6f61;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #e55c4e;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 1.2rem;
-    padding: 0.7rem 1.2rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 1rem;
-    padding: 0.6rem 1rem;
   }
 `;
 
@@ -108,8 +80,6 @@ const Home = () => {
           allowFullScreen
         ></iframe>
       </MapContainer>
-
-      <Button to="/agendar-turno">Agendar Turno</Button>
     </HomeContainer>
   );
 };

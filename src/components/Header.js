@@ -106,6 +106,8 @@ const Header = () => {
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
+  const handleLinkClick = () => setIsMobileMenuOpen(false);
+
   return (
     <HeaderWrapper>
       <Nav>
@@ -117,7 +119,7 @@ const Header = () => {
           <NavLink to="/tratamientos">Tratamientos</NavLink>
           <NavLink to="/productos">Laboratorios</NavLink>
           <NavLink to="/sobre-mi">Sobre mí</NavLink>
-          <NavLink to="/contacto">Contacto</NavLink>
+          <NavLink to="/agendar-turno">Agendar Turno</NavLink>
         </NavLinks>
         <Hamburger onClick={toggleMobileMenu}>
           <div></div>
@@ -127,11 +129,21 @@ const Header = () => {
       </Nav>
       {isMobileMenuOpen && (
         <MobileMenu>
-          <NavLink to="/">Inicio</NavLink>
-          <NavLink to="/tratamientos">Tratamientos</NavLink>
-          <NavLink to="/productos">Laboratorios</NavLink>
-          <NavLink to="/sobre-mi">Sobre mí</NavLink>
-          <NavLink to="/contacto">Contacto</NavLink>
+          <NavLink to="/" onClick={handleLinkClick}>
+            Inicio
+          </NavLink>
+          <NavLink to="/tratamientos" onClick={handleLinkClick}>
+            Tratamientos
+          </NavLink>
+          <NavLink to="/productos" onClick={handleLinkClick}>
+            Laboratorios
+          </NavLink>
+          <NavLink to="/sobre-mi" onClick={handleLinkClick}>
+            Sobre mí
+          </NavLink>
+          <NavLink to="/agendar-turno" onClick={handleLinkClick}>
+            Agendar Turno
+          </NavLink>
         </MobileMenu>
       )}
     </HeaderWrapper>
